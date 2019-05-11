@@ -6,7 +6,6 @@ This is not intended to be used maliciously.
 
 ## TODO
 
-- Validation of fields
 - Clean up css duplication
 - Add download image button
 - Add delete & edit functionality

@@ -187,6 +187,10 @@ label {
   font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#message {
+  resize: none;
+}
+
 .button {
   color: rgb(79, 148, 205);
   background: rgba(0, 0, 0, 0) none repeat-x scroll 0% 0% / auto padding-box border-box;

@@ -20,12 +20,27 @@ function addMessage(type) {
     var className = "chat-bubble-left"
   }
 
-  const message = document.getElementById("message").value;
-  let time = document.getElementById("time").value;
-  time = new moment(time, "HH:mm")
+  let message = document.getElementById("message");
+  let time = document.getElementById("time");
+
+  if (message.value == "" || !message.value.replace(/\s/g, '').length) {
+    message.setCustomValidity("A valid message is needed.");
+    message.reportValidity();
+    return false;
+  }
+
+  if (time.value == "") {
+    time.setCustomValidity("A valid time is needed.");
+    time.reportValidity();
+    return false;
+  }
+
+  message = message.value;
+  time = new moment(time.value, "HH:mm")
   time = time.format("h:mm A")
 
-  document.getElementById("chat-bubble-area").insertAdjacentHTML('beforeend',
+  const chatBubbleArea = document.getElementById("chat-bubble-area");
+  chatBubbleArea.insertAdjacentHTML('beforeend',
     '<div class="chat-bubble-container">\
       <div class="' + className + '">\
         <p class="chat">'
@@ -33,15 +48,26 @@ function addMessage(type) {
         '</p> <span class="time">' + time + '</span>\
       </div>\
     </div>'
-  )
+  );
+  document.getElementById("message").value = "";
+  chatBubbleArea.scrollTop = chatBubbleArea.scrollHeight;
 }
 
 function addDateDivider() {
-  let date = document.getElementById("date").value;
-  date = new moment(date);
+  let date = document.getElementById("date");
+
+  if (date.value == "") {
+    date.setCustomValidity("A valid date is needed.");
+    date.reportValidity();
+    return false;
+  }
+
+  date = new moment(date.value);
   date = date.format("dddd, D MMMM YYYY");
 
-  document.getElementById("chat-bubble-area").insertAdjacentHTML('beforeend',
+  const chatBubbleArea = document.getElementById("chat-bubble-area");
+  chatBubbleArea.insertAdjacentHTML('beforeend',
     '<div class="date">' + date + '</div>'
   )
+  chatBubbleArea.scrollTop = chatBubbleArea.scrollHeight;
 }
