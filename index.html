@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <section id="main">
+      <div id="content">
+        <h2 id="title">Moodle Chat Faker</h2>
+        <h4 id="subtitle">Create a realistic looking Moodle chat to fool your friends and peers.</h2>
+        <div id="message-area">
+          <div id="control-area">
+            <div id="title-area">Messages</div>
+            <div id="main-controls">
+              <label>Contact Name</label>
+              <input type="text" id="nameInput" class="input" value="Teacher" oninput="displayName()"><br />
+              <label>Chat Message</label>
+              <textarea rows=10 name="message" id="message" class="input"></textarea><br />
+              <input type="time" id="time" class="input"></textarea><br />
+              <div id="button-container">
+                <button type="button" class="button" onclick="addMessage('sent')">Sent</button>
+                <button type="button" class="button" onclick="addMessage('recieved')">Recieved</button>
+              </div>
+              <label id="date-label">Date Divider</label>
+              <input type="date" id="date" class="input"><br />
+              <button type="button" class="button" onclick="addDateDivider()">Add</button>
+            </div>
+            <div id="save">
+            </div>
+          </div>
+          <div id="chat-area">
+            <div id="title-area">
+              <p id="messages">&lt; Messages</p>
+              <p id="name">Teacher</p>
+              <p id="edit-button">Edit</p>
+            </div>
+            <div id="chat-bubble-area"></div>
+            <div id="write-message">
+              <div class="table-cell">
+                <textarea rows="1" placeholder="Write a message..." id="text-area" oninput="autoExpandTextArea()"></textarea>
+              </div>
+              <div class="table-cell">
+                <p id="send">Send</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">View source code on <a href="https://github.com/tusmanakhter/MoodleChatFaker" target="_blank" rel="noopener">GitHub</a></div>
+    </section>
+  </body>
+</html>

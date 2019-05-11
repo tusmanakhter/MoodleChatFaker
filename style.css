@@ -1,0 +1,246 @@
+html * {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+body {
+  margin: 0
+}
+
+#main {
+  font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1680px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+#content {
+  width: 74.35897436%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+#title {
+  color: rgb(51, 51, 51);
+  font: normal normal 700 normal 28px / 40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+#subtitle {
+  color: rgb(51, 51, 51);
+  font: normal normal 700 normal 15px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+#message-area {
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 4px 4px 4px 4px;
+}
+
+#control-area {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 600px;
+  width: 280px;
+  border-right: 1px solid rgb(227, 227, 227);
+}
+
+.date {
+  color: rgb(161, 161, 161);
+  text-align: center;
+  font: normal normal 400 normal 12px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 5px 0px;
+}
+
+.time {
+  color: rgb(161, 161, 161);
+  float: right;
+  font: normal normal 400 normal 10px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#chat-area {
+  float: right;
+  position: relative;
+  width: calc(100% - 280px);
+}
+
+#title-area {
+  height: 50px;
+  text-align: center;
+  border-bottom: 1px solid rgb(227, 227, 227);
+  line-height: 50px;
+}
+
+#messages {
+  margin: 0;
+  left: 0px;
+  position: absolute;
+  padding: 0px 0px 0px 15px;
+  color: rgb(79, 148, 205);
+  display: none;
+}
+
+#name {
+  margin: 0;
+  color: rgb(79, 148, 205);
+}
+
+#edit-button {
+  margin: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 0px 15px 0px 0px;
+  color: rgb(79, 148, 205);
+}
+
+#chat-bubble-area {
+  box-sizing: border-box;
+  height: 500px;
+  overflow: hidden auto;
+  padding: 20px;
+}
+
+.chat-bubble-container {
+  height: auto;
+  overflow: hidden;
+}
+
+.chat-bubble-left {
+  float: left;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 4px 4px 4px 4px;
+  margin: 0px 0px 5px;
+  padding: 10px;
+    max-width: 55%;
+}
+
+.chat-bubble-right {
+  float: right;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 4px 4px 4px 4px;
+  margin: 0px 0px 5px;
+  padding: 10px;
+  max-width: 55%;
+}
+
+.chat {
+  font: normal normal 400 normal 12px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  word-break: break-word;
+}
+
+#write-message {
+  box-sizing: border-box;
+  border-top: 1px solid rgb(227, 227, 227);
+  padding: 10px 10px 8px;
+}
+
+#send {
+  color: rgb(79, 148, 205);
+  border: 1px solid rgba(0, 0, 0, 0);
+  margin: 0px 0px 0px 5px;
+  padding: 4px 12px;
+}
+
+.table-cell {
+  display: table-cell;
+  width: 100%;
+}
+
+#text-area {
+  resize: none;
+  vertical-align: middle;
+  width: 100%;
+  background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(85, 85, 85);
+  border-radius: 4px 4px 4px 4px;
+  font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 4px 6px;
+}
+
+#main-controls {
+  height: 480px;
+  padding: 10px;
+}
+
+#save {
+  border-top: 1px solid rgb(227, 227, 227);
+  background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
+}
+
+label {
+  display: block;
+  padding-left: 2px;
+}
+
+.input {
+  margin: 5px 0px;
+  width: 100%;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 4px 4px 4px 4px;
+  padding: 4px 6px;
+  font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.button {
+  color: rgb(79, 148, 205);
+  background: rgba(0, 0, 0, 0) none repeat-x scroll 0% 0% / auto padding-box border-box;
+  border: 1px solid rgba(79, 148, 205);
+  border-radius: 4px 4px 4px 4px;
+  font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 4px 12px;
+  cursor: pointer;
+  margin: 2px 0px;
+}
+
+#date-label {
+  padding: 5px 0px 2px 2px;
+  
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 979px) {
+  #messages {
+    display: block;
+  }
+
+  #chat-area {
+    width: 100%;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box
+  }
+
+  #control-area {
+    width: 100%;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 10px;
+  }
+
+  #message-area {
+    border: none;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  #content {
+    width: 85%
+  }
+}
