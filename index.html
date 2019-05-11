@@ -20,7 +20,8 @@
               <input type="text" id="nameInput" class="input" value="Teacher" oninput="displayName()"><br />
               <label>Chat Message</label>
               <textarea rows=10 name="message" id="message" class="input"></textarea><br />
-              <input type="time" id="time" class="input"></textarea><br />
+              <input type="time" id="time" class="input"></textarea>
+              <button type="button" class="button" id="now" onclick="timeNow()">Now</button>
               <div id="button-container">
                 <button type="button" class="button" onclick="addMessage('sent')">Sent</button>
                 <button type="button" class="button" onclick="addMessage('recieved')">Recieved</button>

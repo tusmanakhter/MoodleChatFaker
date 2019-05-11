@@ -1,13 +1,12 @@
-html * {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-}
-
 body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
   margin: 0
 }
 
 #main {
-  font: normal normal 400 normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,14 +23,17 @@ body {
 
 #title {
   color: rgb(51, 51, 51);
-  font: normal normal 700 normal 28px / 40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
   margin: 10px 0px;
   text-align: center;
 }
 
 #subtitle {
   color: rgb(51, 51, 51);
-  font: normal normal 700 normal 15px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
   margin: 10px 0px;
   text-align: center;
 }
@@ -52,14 +54,18 @@ body {
 .date {
   color: rgb(161, 161, 161);
   text-align: center;
-  font: normal normal 400 normal 12px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
   margin: 5px 0px;
 }
 
 .time {
   color: rgb(161, 161, 161);
   float: right;
-  font: normal normal 400 normal 10px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+#time {
+  width: calc(100% - 60px);
 }
 
 #chat-area {
@@ -110,17 +116,7 @@ body {
   overflow: hidden;
 }
 
-.chat-bubble-left {
-  float: left;
-  border: 1px solid rgb(227, 227, 227);
-  border-radius: 4px 4px 4px 4px;
-  margin: 0px 0px 5px;
-  padding: 10px;
-    max-width: 55%;
-}
-
-.chat-bubble-right {
-  float: right;
+.chat-bubble {
   border: 1px solid rgb(227, 227, 227);
   border-radius: 4px 4px 4px 4px;
   margin: 0px 0px 5px;
@@ -128,8 +124,16 @@ body {
   max-width: 55%;
 }
 
+.chat-bubble-left {
+  float: left;
+}
+
+.chat-bubble-right {
+  float: right;
+}
+
 .chat {
-  font: normal normal 400 normal 12px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
   margin: 0px;
   word-break: break-word;
 }

@@ -42,7 +42,7 @@ function addMessage(type) {
   const chatBubbleArea = document.getElementById("chat-bubble-area");
   chatBubbleArea.insertAdjacentHTML('beforeend',
     '<div class="chat-bubble-container">\
-      <div class="' + className + '">\
+      <div class="chat-bubble ' + className + '">\
         <p class="chat">'
           + message +
         '</p> <span class="time">' + time + '</span>\
@@ -70,4 +70,16 @@ function addDateDivider() {
     '<div class="date">' + date + '</div>'
   )
   chatBubbleArea.scrollTop = chatBubbleArea.scrollHeight;
+}
+
+function timeNow() {
+  var d = new Date(),
+  h = d.getHours(),
+  m = d.getMinutes();
+  if (h < 10)
+    h = '0' + h;
+  if (m < 10)
+    m = '0' + m;
+  document.getElementById("time").setCustomValidity("");
+  document.getElementById("time").value = h + ':' + m;
 }
