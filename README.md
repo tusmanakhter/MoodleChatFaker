@@ -10,3 +10,5 @@ This is not intended to be used maliciously.
 - Clean up css duplication
 - Add download image button
 - Add delete & edit functionality
+- Improve some styling
+- Check browser compatibility

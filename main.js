@@ -23,7 +23,7 @@ function addMessage(type) {
   const message = document.getElementById("message").value;
   let time = document.getElementById("time").value;
   time = new moment(time, "HH:mm")
-  time = time.format("hh:mm A")
+  time = time.format("h:mm A")
 
   document.getElementById("chat-bubble-area").insertAdjacentHTML('beforeend',
     '<div class="chat-bubble-container">\
