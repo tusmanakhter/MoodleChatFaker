@@ -58,6 +58,29 @@ body {
   margin: 5px 0px;
 }
 
+.date .edit {
+  margin: 0;
+}
+
+.date .edit #delete {
+  margin: 0;
+  margin-left: 8px;
+}
+
+.date .edit button {
+  margin: 0;
+  margin-left: 2px;
+}
+
+.date:hover .edit {
+  display: inline-block;
+}
+
+.date:hover button {
+  display: inline-block;
+  height: 5px;
+}
+
 .time {
   color: rgb(161, 161, 161);
   float: right;
@@ -116,6 +139,10 @@ body {
   overflow: hidden;
 }
 
+.chat-bubble-container:hover .edit {
+  display: block;
+}
+
 .chat-bubble {
   border: 1px solid rgb(227, 227, 227);
   border-radius: 4px 4px 4px 4px;
@@ -172,7 +199,7 @@ body {
   padding: 10px;
 }
 
-#save {
+#save-image-container {
   border-top: 1px solid rgb(227, 227, 227);
   background: rgb(245, 245, 245) none repeat scroll 0% 0% / auto padding-box border-box;
 }
@@ -219,6 +246,21 @@ label {
 #footer {
   text-align: center;
   padding-bottom: 10px;
+}
+
+.edit {
+  margin: 5px;
+  display: none;
+}
+
+.edit button {
+  border: none;
+  padding: 0;
+  margin: 5px;
+}
+
+#save {
+  display: none;
 }
 
 @media (max-width: 979px) {
