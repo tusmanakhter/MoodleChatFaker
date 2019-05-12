@@ -145,8 +145,13 @@ function genImage() {
   } while (elem);
   distance = distance < 0 ? 0 : distance;
 
-  html2canvas(document.querySelector("#chat-area")).then(canvas => {
-    document.querySelector("#image").appendChild(canvas);
+  html2canvas(document.querySelector("#chat-area"), {scale:1}).then(canvas => {
+    var img = canvas.toDataURL("image/png");
+    var elem = document.createElement('img');
+    elem.setAttribute(
+      'src', img
+    );
+    document.querySelector("#image").appendChild(elem);
     window.scrollTo({
       top: distance,
       behavior: 'smooth'
