@@ -6,6 +6,5 @@ This is not intended to be used maliciously.
 
 ## TODO
 
-- Add download image button
 - Improve some styling
 - Check browser compatibility

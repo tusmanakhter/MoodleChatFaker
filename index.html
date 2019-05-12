@@ -3,15 +3,16 @@
     <meta charset="utf-8">
     <title>MoodleChatFaker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="main.js?v=1"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css?v=1">
+    <script type="text/javascript" src="assets/js/main.js?v=1"></script>
+    <script type="text/javascript" src="assets/js/lib/moment.min.js"></script>
+    <script type="text/javascript" src="assets/js/lib/html2canvas.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=1">
   </head>
   <body>
     <section id="main">
       <div id="content">
-        <h2 id="title">Moodle Chat Faker</h2>
-        <h4 id="subtitle">Create a realistic looking Moodle chat to fool your friends and peers.</h2>
+        <h2 class="title">Moodle Chat Faker</h2>
+        <h4 class="subtitle">Create a realistic looking Moodle chat to fool your friends and peers.</h2>
         <div id="message-area">
           <div id="control-area">
             <div id="title-area">Messages</div>
@@ -31,6 +32,9 @@
               <button type="button" class="button" onclick="addDateDivider()">Add</button>
             </div>
             <div id="save-image-container">
+              <button class="button" id="gen-image-button" onclick="genImage()">
+                Generate Image
+              </button>
             </div>
           </div>
           <div id="chat-area">
@@ -49,6 +53,11 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="gen-image">
+          <h2 class="title">Generated image</h2>
+          <h4 class="subtitle">Right click or press and hold to save image.</h2>
+          <div id="image"></div>
         </div>
       </div>
       <div id="footer">View source code on <a href="https://github.com/tusmanakhter/MoodleChatFaker" target="_blank" rel="noopener">GitHub</a></div>
